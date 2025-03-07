@@ -4,8 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Konstantinos Prasinos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -23,11 +29,117 @@
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <div id="content">
+    <section id="content-left-side">
+      <div id="titles">
+        <p class="headline-bold">
+          <span>Konstantinos </span>
+          <span class="green-text">Prasinos</span>
+        </p>
+        <p class="title-medium">Front End Engineer</p>
+      </div>
+      <div id="navigation-buttons">
+        <button id="about-button" class="navigation-button selected">
+          <div class="navigation-button-dot"></div>
+          <span>About</span>
+        </button>
+        <button id="education-button" class="navigation-button">
+          <div class="navigation-button-dot"></div>
+          <span>Education</span>
+        </button>
+        <button id="projects-button" class="navigation-button">
+          <div class="navigation-button-dot"></div>
+          <span>Projects</span>
+        </button>
+      </div>
+    </section>
+    <section id="content-right-side">
+      <div id="upper-spacer"></div>
+      <section class="content-section" id="about">
+        <button class="title-medium section-title-button" id="about-section-title">
+          <div class="title-icons">
+            <span class="green-text"># </span>
+            <div class="copy-icon-container">
+              <img src="assets/copy.svg" alt="Copy Icon" class="copy-icon">
+            </div>
+          </div>
+          <span>About</span>
+        </button>
+        <div class="body-medium">
+          <span>I’m a driven </span>
+          <span class="green-text">Informatics and Computer Engineering</span>
+          <span>
+            student at the University of West Attica in Greece, I'm passionate about crafting innovative mobile and web applications.
+            <br><br>My expertise spans across Flutter development for cross-platform solutions and modern web frameworks like React and Svelte.
+            <br><br>Currently, I'm actively building Tabme, a Flutter application designed to streamline bill splitting through OCR and AI integration, showcasing my commitment to creating practical and user-friendly software.
+            <br><br>I thrive on tackling complex challenges and am eager to contribute my skills to impactful projects.
+          </span>
+        </div>
+      </section>
+      <section class="content-section" id="education">
+        <button class="title-medium section-title-button" id="education-section-title">
+          <div class="title-icons">
+            <span class="green-text"># </span>
+            <div class="copy-icon-container">
+              <img src="assets/copy.svg" alt="Copy Icon" class="copy-icon">
+            </div>
+          </div>
+          <span>Education</span>
+        </button>
+        <div class="education-subsection">
+          <div class="subtitle-medium green-text">
+            Informatics and Computer Engineering
+          </div>
+          <div class="body-medium education-basic-information">
+            <span>University of West Attica, Greece</span>
+            <span>2020-2025</span>
+          </div>
+          <div class="body-medium">
+            My Informatics and Computer Engineering studies provided a robust foundation in software development principles and practices.
+            <br>I gained proficiency in various programming languages and frameworks, developing strong problem-solving skills through coursework and practical projects.
+            <br>I acquired knowledge in core areas such as algorithms, data structures, and software design, and honed my ability to work effectively in team environments.
+            <br>This comprehensive education has prepared me to tackle complex challenges and contribute to the development of impactful software solutions.
+          </div>
+        </div>
+        <div class="education-subsection">
+          <div class="subtitle-medium green-text">
+            Erasmus in Informatics and Management
+          </div>
+          <div class="body-medium education-basic-information">
+            <span>University of Hradec Kralove, Czech Republic</span>
+            <span>Febr 2024-June 2024</span>
+          </div>
+          <div class="body-medium">
+            Participated in the Erasmus exchange program.
+            Completed courses in:
+            <ul>
+              <li>Computer Architecture</li>
+              <li>Introduction to Law</li>
+              <li>Systems for Management Support</li>
+              <li>Business Economics</li>
+              <li>Methods of Operational Research</li>
+            </ul>
+            Engaged in cross-cultural learning and collaboration with international peers.
+            Developed skills in operational research methods and business economics.
+            Gained insights into legal principles relevant to technology and business.
+          </div>
+        </div>
+      </section>
+      <section class="content-section" id="projects">
+        <button class="title-medium section-title-button" id="projects-section-title">
+          <div class="title-icons">
+            <span class="green-text"># </span>
+            <div class="copy-icon-container">
+              <img src="assets/copy.svg" alt="Copy Icon" class="copy-icon">
+            </div>
+          </div>
+          <span>Projects</span>
+        </button>
+        <div class="body-medium">
+        </div>
+      </section>
+    </section>
+  </div>
   <script src="js/app.js"></script>
-
 </body>
-
 </html>
