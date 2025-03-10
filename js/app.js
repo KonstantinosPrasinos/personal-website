@@ -56,10 +56,19 @@ document.getElementById('projects-section-title').onclick = sectionTitleButtonCl
 
 window.addEventListener('load', () => {
   const hash = window.location.hash;
+
   if (hash) {
     const targetElement = document.querySelector(hash);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   }
+});
+
+document.getElementById('taskflow-button').addEventListener('click', function() {
+  window.open('https://github.com/KonstantinosPrasinos/taskflow', '_blank');
+});
+
+document.getElementById('tabme-button').addEventListener('click', function() {
+  window.open('https://tabme.app/');
 });
