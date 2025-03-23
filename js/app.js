@@ -33,6 +33,7 @@ document.getElementById('education-button').onclick = navigationButtonClicked;
 document.getElementById('projects-button').onclick = navigationButtonClicked;
 
 const sectionTitleButtonClicked = (event) => {
+  if (!navigator || !navigator.clipboard) return;
   const eventTarget = event.currentTarget;
   const sectionTitle = eventTarget.id.split('-')[0];
 

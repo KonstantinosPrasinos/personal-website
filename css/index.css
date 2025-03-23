@@ -3,15 +3,22 @@
   max-width: 1024px;
   height: 100%;
 
+  position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 1rem;
+
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #content-left-side {
-  width: 40%;
+  width: 30%;
   padding-top: 60px;
+  position: fixed;
+  top: 0;
 
   display: flex;
   flex-direction: column;
@@ -31,14 +38,13 @@
 }
 
 #content-right-side {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 40px;
-
-  height: 100%;
-  overflow-y: auto;
-  padding-right: 15px;
+  padding: 0 15px 0 4px;
+  position: absolute;
+  right: 0;
 }
 
 .green-text {
@@ -226,6 +232,8 @@
   border-radius: 20px;
   min-width: 240px;
   box-sizing: border-box;
+
+  box-shadow: var(--smooth-shadow);
 }
 
 .project-details {
@@ -256,6 +264,7 @@
   padding: 4px;
 
   transition: 0.2s ease-out padding, 0.2s ease-out width;
+  box-shadow: var(--surface-1-shadow);
 }
 
 .open-icon {
@@ -263,27 +272,18 @@
   width: 1.25em;
 }
 
+/*.project-link-text {*/
+/*  opacity: 0;*/
+/*  display: none;*/
+/*  transition: opacity 0.2s ease-out;*/
+/*}*/
+
 .project-link-text {
   opacity: 0;
-  visibility: collapse;
-  transition: opacity 0.2s ease-out;
+  width: 0;
 }
 
-.project-container:hover .project-link-container:not(.short) {
-  width: 8.5em;
-  padding: 4px 4px 4px 10px;
-}
 
-.project-container:hover .project-link-container:not(:not(.short)) {
-  width: 7.5em;
-  padding: 4px 4px 4px 10px;
-}
-
-.project-container:hover .project-link-text {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.2s ease-out 0.2s, visibility 0.2s 0.2s;
-}
 
 /* Project chips */
 .project-chips {
@@ -311,11 +311,13 @@
 
   #content-left-side {
     width: 100%;
+    position: relative;
   }
 
   #content-right-side {
     width: 100%;
     overflow: unset;
+    position: relative;
   }
 
   #navigation-buttons {
@@ -324,5 +326,39 @@
 
   .project-container {
     width: 100%;
+  }
+
+  .project-link-container:not(.short) {
+    width: 8.5em;
+    padding: 4px 4px 4px 10px;
+  }
+
+  .project-link-container:not(:not(.short)) {
+    width: 7.5em;
+    padding: 4px 4px 4px 10px;
+  }
+
+  .project-link-text:not(.short) {
+    opacity: 1;
+    width: 6.75em;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-container:hover .project-link-text {
+    opacity: 1;
+    width: 6.75em;
+
+    transition: opacity 0.2s 0.22s ease, width 0.02s 0.2s ease;
+  }
+
+  .project-container:hover .project-link-container:not(.short) {
+    width: 8.5em;
+    padding: 4px 4px 4px 10px;
+  }
+
+  .project-container:hover .project-link-container:not(:not(.short)) {
+    width: 7.5em;
+    padding: 4px 4px 4px 10px;
   }
 }
