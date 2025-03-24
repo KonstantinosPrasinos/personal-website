@@ -98,7 +98,7 @@
   gap: 15px;
 }
 
-#upper-spacer {
+.upper-spacer {
   height: 20px; /* +40px because of the flex gap */
   flex-shrink: 0;
 }
@@ -193,7 +193,7 @@
   overflow: hidden;
 }
 
-.section-title-button .title-icons span {
+.section-title-button .title-icons .green-text {
   position: absolute;
   top: -3px;
   transition: 0.2s ease-out top;
@@ -203,6 +203,8 @@
   position: absolute;
   top: -1em;
   transition: 0.2s ease-out top;
+  display: block;
+  unicode-bidi: isolate;
 }
 
 .section-title-button:hover .title-icons .copy-icon-container {
@@ -301,7 +303,90 @@
   border: 2px solid var(--border-color);
 }
 
-/* Media queries */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-link {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  width: min-content;
+  padding: 4px 10px;
+  transform: translateX(-12px);
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+
+  border: 2px solid;
+  border-color: var(--background-color);
+  background-color: var(--background-color);
+  border-radius: 20px;
+  color: var(--on-background-color);
+
+  transition: all 0.2s ease-out
+}
+
+.contact-link:hover {
+  background-color: var(--surface-color);
+  box-shadow: var(--surface-1-shadow);
+  border-color: var(--border-color);
+  color: var(--accent-color);
+}
+
+.open-link-icon {
+  height: 1em;
+  width: 1em;
+
+  transition: filter 0.2s ease-out;
+
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(4642%) hue-rotate(102deg) brightness(123%) contrast(92%);
+}
+
+@keyframes moveButton {
+  0% {
+    transform: translate(0, 0); /* Start at original position */
+  }
+  50% {
+    transform: translate(1px, -1px); /* Move top-left */
+  }
+  100% {
+    transform: translate(0, 0); /* Return to original position */
+  }
+}
+
+.contact-link:hover .open-link-icon {
+  animation: moveButton 2s infinite ease-in-out;
+  filter: invert(50%) sepia(63%) saturate(3254%) hue-rotate(140deg) brightness(90%) contrast(98%);
+}
+
+.contact-icon {
+  height: 1.25em;
+  width: 1.25em;
+
+  transition: 0.2s ease-out filter;
+}
+
+.contact-link:hover .contact-icon {
+  filter: invert(50%) sepia(63%) saturate(3254%) hue-rotate(140deg) brightness(90%) contrast(98%);
+}
+
+.contact-subtitle {
+  opacity: 0.5;
+}
+
+/* Media queries (Γεια σου Σπύρο) */
 
 @media (max-width: 768px) {
   #content {
