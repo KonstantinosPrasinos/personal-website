@@ -63,8 +63,6 @@ document.getElementById('contact-section-title').onclick = sectionTitleButtonCli
 window.addEventListener('load', () => {
   const hash = window.location.hash;
 
-  console.log(hash)
-
   if (hash) {
     const targetElement = document.querySelector(hash);
     if (targetElement) {
