@@ -12,6 +12,8 @@
 
   overflow-y: auto;
   overflow-x: hidden;
+
+  box-sizing: border-box;
 }
 
 #content-left-side {
@@ -41,10 +43,11 @@
   width: 60%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 0 15px 0 4px;
+  /*gap: 40px;*/
+  padding: 0 4px 0 4px;
   position: absolute;
   right: 0;
+  box-sizing: border-box;
 }
 
 .green-text {
@@ -96,6 +99,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding-top: 40px;
 }
 
 .upper-spacer {
@@ -320,7 +324,7 @@
   gap: 5px;
   align-items: center;
   text-decoration: none;
-  width: min-content;
+  width: max-content;
   padding: 4px 10px;
   transform: translateX(-12px);
 
@@ -335,7 +339,11 @@
   border-radius: 20px;
   color: var(--on-background-color);
 
-  transition: all 0.2s ease-out
+  transition: all 0.2s ease-out;
+
+  max-width: 100%; /* Example width */
+  white-space: normal; /* Ensure wrapping is enabled */
+  word-break: break-word; /* Forcibly break long words */
 }
 
 .contact-link:hover {
