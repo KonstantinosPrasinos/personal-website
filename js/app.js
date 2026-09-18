@@ -32,6 +32,7 @@ const createCopiedTooltip = () => {
 }
 
 document.getElementById('about-button').onclick = navigationButtonClicked;
+document.getElementById('experience-button').onclick = navigationButtonClicked;
 document.getElementById('education-button').onclick = navigationButtonClicked;
 document.getElementById('projects-button').onclick = navigationButtonClicked;
 document.getElementById('contact-button').onclick = navigationButtonClicked;
@@ -56,6 +57,7 @@ const sectionTitleButtonClicked = (event) => {
 }
 
 document.getElementById('about-section-title').onclick = sectionTitleButtonClicked;
+document.getElementById('experience-section-title').onclick = sectionTitleButtonClicked;
 document.getElementById('education-section-title').onclick = sectionTitleButtonClicked;
 document.getElementById('projects-section-title').onclick = sectionTitleButtonClicked;
 document.getElementById('contact-section-title').onclick = sectionTitleButtonClicked;

@@ -118,6 +118,35 @@
   gap: 10px;
 }
 
+.experience-basic-information {
+  opacity: 50%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.experience-location {
+  opacity: 50%;
+  margin-top: -6px;
+}
+
+.experience-subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience-bullet-list {
+  margin: 4px 0 0 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .section-title-button {
   width: max-content;
   transition: 0.1s ease-out color;
